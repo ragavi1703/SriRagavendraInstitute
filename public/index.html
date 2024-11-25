@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
+      <meta http-equiv="origin-trial" content="A/kargTFyk8MR5ueravczef/wIlTkbVk1qXQesp39nV+xNECPdLBVeYffxrM8TmZT6RArWGQVCJ0LRivD7glcAUAAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IkRpc2FibGVUaGlyZFBhcnR5U3RvcmFnZVBhcnRpdGlvbmluZzIiLCJleHBpcnkiOjE3NDIzNDIzOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9">
 
       <!-- added by sambu -->
+      <script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/-ZG7BC9TxCVEbzIO2m429usb/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-gaZtYaI7oJHEOo1YO6VuoCE4iZ5fMV9mYHP0BHf+r2ttABnpWWCIkgI6ItNW4ZdO"></script>
       
       
       <script src="js/jquery.min.js"></script>
@@ -51,6 +53,13 @@
              alert("Message must be filled out");
              return false;
            }
+           //validate recaptcha
+
+           const recaptchaResponse = grecaptcha.getResponse();
+           if(recaptchaResponse.length === 0){
+            alert("Please complete the reCAPTCHA");
+            return false;
+           }
          
            return true; // All validations passed, allow form submission
          }
@@ -65,12 +74,13 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <!-- mobile metas -->
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=5">
       <!-- site metas -->
+      <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32..jpg">
       <title>SRTI</title>
-      <meta name="keywords" content="">
-      <meta name="description" content="">
-      <meta name="author" content="">
+      <meta name="keywords" content>
+      <meta name="description" content="Learn professional typewriting skills at SRTI. We offer expert courses in typing, and computer skills, helping students and professionals improve speed and accuracy for career success.">
+      <meta name="author" content>
       <!-- bootstrap css -->
       <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
       <!-- style css -->
@@ -123,6 +133,45 @@
 }
 
       </style>
+      <script>
+         
+         // Show the button when the user scrolls down 200px
+       //   window.onscroll = function() {
+       //     const backToTopButton = document.getElementById('backToTop');
+       //     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+       //       backToTopButton.style.display = "block";
+       //     } else {
+       //       backToTopButton.style.display = "none";
+       //     }
+       //   };
+       
+       //   // Smooth scroll to the top when the button is clicked
+       //   document.getElementById('backToTop').addEventListener('click', function(e) {
+       //     e.preventDefault();
+       //     window.scrollTo({ top: 0, behavior: 'smooth' });
+       //   });
+       
+       
+       
+       
+       document.addEventListener('DOMContentLoaded', function() {
+           window.onscroll = function() {
+               const backToTopButton = document.getElementById('backToTop');
+               if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                   backToTopButton.style.display = "block";
+               } else {
+                   backToTopButton.style.display = "none";
+               }
+           };
+       
+           // Smooth scroll to the top when the button is clicked
+           document.getElementById('backToTop').addEventListener('click', function(e) {
+               e.preventDefault();
+               window.scrollTo({ top: 0, behavior: 'smooth' });
+           });
+       });
+       
+       </script>
    </head>
    <body>
 
@@ -133,14 +182,18 @@
             <div class="row">
                <div class="col-sm-12">
                   <div class="header_top_main">
-                     <div class="call_text"><a href="tel:+91-6369687284"><i class="fa fa-phone" aria-hidden="true"></i> +91-6369687284</a></div>
+                     <div class="call_text"><a href="tel:+916369687284"><i class="fa fa-phone" aria-hidden="true"></i> +91 63696 87284</a></div>
                      <div class="call_text_2"><a href="mailto:sathiyamoorthy.sp@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i> sathiyamoorthy.sp@gmail.com</a></div>
-                     <div class="call_text_1"><a href="https://maps.app.goo.gl/47yTE8BiqxU4vzyn6"><i class="fa fa-map-marker" aria-hidden="true"></i> Karumandapam, Trichy</a></div>
+                     <div class="call_text_1"><a href="https://maps.app.goo.gl/47yTE8BiqxU4vzyn6"><i class="fa fa-map-marker" aria-hidden="true"></i> Trichy</a></div>
                   </div>
                </div>
             </div>
          </div>
       </div>
+      <a href="#" id="backToTop" class="back-to-top" style="display: none;">
+         <i class="fa fa-arrow-up"></i>
+
+       </a>
       <!-- header top section start -->
       <!-- header section start -->
       <div class="header_section" style="padding-bottom: 70px;">
@@ -267,41 +320,41 @@
             <div class="row">
                <div class="col-sm-12">
                   <h1 class="services_taital">Our Courses</h1>
-                  <p class="services_text_1">Empower your future with our comprehensive courses in Typewriting, Tally and COA.</p>
+                  <p class="services_text_1">Empower your future with our comprehensive courses in Typewriting, Tally and Computer On OfficeAutomation(COA).</p>
                </div>
             </div>
             <div class="services_section_2">
                <div class="row">
                   <div class="col-lg-3 col-sm-6">
                      <div class="box_main active">
-                        <div class="service_img"><img src="images/eng.webp"></div>
-                        <h4 class="development_text">TYPEWRITING ENGLISH</h4>
+                        <div class="service_img"><img src="images/eng_50 (1) (1).jpg" alt="TYPEWRITING ENGLISH"></div>
+                        <h2 class="development_text">TYPEWRITING ENGLISH</h2>
                         <p class="services_text">We focus on building a strong foundation in English typewriting, enabling our students to type fluently with precision. Whether you're aiming for certification or simply want to improve your speed, we teach you to all proficiency levels.</p>
-                        <div class="readmore_bt"><a href="course.html">Read More</a></div>
+                        <div class="readmore_bt"><a href="course.html">Course Details</a></div>
                      </div>
                   </div>
                   <div class="col-lg-3 col-sm-6">
                      <div class="box_main">
-                        <div class="service_img"><img src="images/tamil.avif"></div>
-                        <h4 class="development_text">TYPEWRITING TAMIL</h4>
+                        <div class="service_img"><img src="images/tamil_50 (1) (1).jpg" alt="TYPEWRITING TAMIL"></div>
+                        <h2 class="development_text">TYPEWRITING TAMIL</h2>
                         <p class="services_text">Our institute offers specialized Tamil typewriting courses, focusing on both speed and accuracy. We train students to master the Tamil typewriting and prepare them for government-recognized typewriting certifications.</p>
-                        <div class="readmore_bt"><a href="course1.html">Read More</a></div>
+                        <div class="readmore_bt"><a href="course1.html">Course Details</a></div>
                      </div>
                   </div>
                   <div class="col-lg-3 col-sm-6">
                      <div class="box_main">
-                        <div class="service_img"><img src="images/coa.webp"></div>
-                        <h4 class="development_text">COA</h4>
+                        <div class="service_img"><img src="images/coa_50 (1).jpg" alt="COA"></div>
+                        <h2 class="development_text">COA</h2>
                         <p class="services_text">The Computer on Office Automation (COA) examination is conducted by the Directorate of Technical Education (DOTE) in Tamil Nadu. To qualify, candidates must have completed a typewriting course, either at the junior or senior level. </p>
-                        <div class="readmore_bt"><a href="course2.html">Read More</a></div>
+                        <div class="readmore_bt"><a href="course2.html">Course Details</a></div>
                      </div>
                   </div>
                   <div class="col-lg-3 col-sm-6">
                      <div class="box_main">
-                        <div class="service_img"><img src="images/tally.webp"></div>
-                        <h4 class="development_text">TALLY</h4>
-                        <p class="services_text">The Tally examination is essential for those looking to establish a career in accounting and finance. Our institute offers comprehensive training designed to prepare candidates for Tally certification, enhancing their employability in various sectors </p>
-                        <div class="readmore_bt"><a href="course3.html">Read More</a></div>
+                        <div class="service_img"><img src="images/tally (1).jpg" alt="TALLY"></div>
+                        <h2 class="development_text">TALLY</h2>
+                        <p class="services_text">The Tally examination is essential for those looking to establish a career in accounting and finance. Our institute offers comprehensive training to prepare candidates for Tally certification, enhancing their employability in various sectors </p>
+                        <div class="readmore_bt"><a href="course3.html">Course Details</a></div>
                      </div>
                   </div>
                </div>
@@ -330,7 +383,7 @@
                   <br><br>
                   இப்பயிலகத்தின் சிறப்பம்சம் சிறப்பான பயிற்சி, மாணவர்களின் வசதிக்கேற்ப தட்டச்சு பயில நேரம் அளித்தல் மற்றும் கட்டுப்பாடு முதலியவையே.<br><br>
                    S.P. சத்தியமூர்த்தி, B.Sc., B.Ed.,<br> உரிமையாளர் மற்றும் முதல்வர்</p>
-                  <div class="read_bt_1"><a href="about.html">Read More</a></div>
+                  <div class="read_bt_1"><a href="about.html">Team Profile</a></div>
                </div>
                <div class="col-md-6">
                   <div class="about_img" style=" position: relative;
@@ -370,7 +423,7 @@
                               <div class="row">
                                  <div class="col-md-4">
                                     <div class="container_main">
-                                       <img src="images/srti 6.jpg" alt="" class="image">
+                                       <img src="images/srti 6 new (1).jpg" alt="TYPING SKILLS" class="image">
                                        <div class="overlay">
                                          
                                        </div>
@@ -382,7 +435,7 @@
                                  </div>
                                  <div class="col-md-4">
                                     <div class="container_main">
-                                       <img src="images/srti 3.jpg" alt="" class="image">
+                                       <img src="images/srti 3 new 1 (1).jpg" alt="FLEXIBLE TIMINGS" class="image">
                                        <div class="overlay">
                                          
                                        </div>
@@ -394,7 +447,7 @@
                                  </div>
                                  <div class="col-md-4">
                                     <div class="container_main">
-                                       <img src="images/srti 11.jpg" alt="" class="image">
+                                       <img src="images/srti 11 new (1).jpg" alt="EXPERT COACHING" class="image">
                                        <div class="overlay">
                                          
                                        </div>
@@ -410,7 +463,7 @@
                               <div class="row">
                                  <div class="col-md-4">
                                     <div class="container_main">
-                                       <img src="images/car 2 1 new.jpg" alt="" class="image">
+                                       <img src="images/car 2 1 final.jpg" alt="REGULAR ASSESSMENT" class="image">
                                        <div class="overlay">
                                          
                                        </div>
@@ -422,7 +475,7 @@
                                  </div>
                                  <div class="col-md-4">
                                     <div class="container_main">
-                                       <img src="images/car 2 2 new.jpg" alt="" class="image">
+                                       <img src="images/car 2 2 final (1).jpg" alt="ASSESSMENT SCHEDULE" class="image">
                                        <div class="overlay">
                                          
                                        </div>
@@ -434,7 +487,7 @@
                                  </div>
                                  <div class="col-md-4">
                                     <div class="container_main">
-                                       <img src="images/money new.jpg" alt="" class="image">
+                                       <img src="images/money new (1) (1).jpg" alt="AFFORDABLE FEES" class="image">
                                        <div class="overlay">
                                           
                                        </div>
@@ -450,7 +503,7 @@
                               <div class="row">
                                  <div class="col-md-4">
                                     <div class="container_main">
-                                       <img src="images/engtyp.jpg" alt="" class="image">
+                                       <img src="images/engtyp.jpg" alt="Senior English Typewriting" class="image">
                                        <div class="overlay">
                                          
                                        </div>
@@ -462,7 +515,7 @@
                                  </div>
                                  <div class="col-md-4">
                                     <div class="container_main">
-                                       <img src="images/tamiltype.jpg" alt="" class="image">
+                                       <img src="images/tamiltype.jpg" alt="Senior Tamil certificate" class="image">
                                        <div class="overlay">
                                           
                                        </div>
@@ -474,7 +527,7 @@
                                  </div>
                                  <div class="col-md-4">
                                     <div class="container_main">
-                                       <img src="images/coacer.jpg" alt="" class="image">
+                                       <img src="images/coacer final.jpg" alt="COA CERTIFICATE" class="image">
                                        <div class="overlay">
                                           <div class="text">
                                             
@@ -514,11 +567,11 @@
                         <div class="col-md-12">
                            <h1 class="testimonial_taital">Testimonial</h1>
                           <div class="testimonial_section_2">
-                              <h2 class="client_name_text">Om prakash<span style="float: right;"><img src="images/quick-icon.png"></span></h2>
+                              <h2 class="client_name_text">Om prakash<span style="float: right;"><img src="images/quick-icon.png" alt="review"></span></h2>
                               <p class="textimonial_text">I enrolled in the institute to prepare for a job that required strong typing skills. The assessments were incredibly helpful in simulating real exams. Madam and Sir provided valuable feedback that allowed me to fine-tune my skills. Thanks to the institute, I landed my dream job and am now typing with confidence</p>
                           </div>
                           <div class="testimonial_section_2">
-                              <h2 class="client_name_text"><img src="images/quick-icon.png"> <span style="float: right;">Hari Haran</span></h2>
+                              <h2 class="client_name_text"><img src="images/quick-icon.png" alt="Review"> <span style="float: right;">Hari Haran</span></h2>
                               <p class="textimonial_text">I highly recommend this institute to anyone looking to improve their typing skills.I've seen a significant improvement in my typing speed and accuracy since joining. The flexible schedule also allows me to balance my studies with work commitments.</p>
                           </div>
                         </div>
@@ -529,11 +582,11 @@
                         <div class="col-md-12">
                            <h1 class="testimonial_taital">Testimonial</h1>
                           <div class="testimonial_section_2">
-                              <h2 class="client_name_text">Murugavel <span style="float: right;"><img src="images/quick-icon.png"></span></h2>
+                              <h2 class="client_name_text">Murugavel <span style="float: right;"><img src="images/quick-icon.png" alt="review"></span></h2>
                               <p class="textimonial_text">Always the best typewriting institute in Trichy. Sir and Madam provide exceptional teaching, ensuring that each student masters their typing skills in the most efficient way possible. Thanks to their expert coaching, I have gained a valuable skill. </p>
                           </div>
                           <div class="testimonial_section_2">
-                              <h2 class="client_name_text"><img src="images/quick-icon.png"> <span style="float: right;">Mahesh</span></h2>
+                              <h2 class="client_name_text"><img src="images/quick-icon.png" alt="Review"> <span style="float: right;">Mahesh</span></h2>
                               <p class="textimonial_text">As a working professional with a busy schedule, I was very much worried about finding the time to attend typewriting classes. However, the Ragavendra Typewriting institute's flexible class timings  made it possible for me to fit my studies into my hectic routine. </p>
                           </div>
                         </div>
@@ -578,7 +631,7 @@
                <div class="row">
                   <div class="col-md-12">
                      <h1 class="contact_taital">Contact Us</h1>
-                   <center><h3>Class Timings: <strong>7-11 am and 2-7 pm</strong> </h3></center>  
+                   <center><h2>Class Timings: <strong>7-11 am and 2-7 pm</strong> </h2></center>  
                   </div>
                </div>
             </div>
@@ -593,18 +646,21 @@
                               <input type="text" class="mail_text" placeholder="Email" name="Email">
                               <textarea class="massage-bt" placeholder="Message" rows="5" id="comment" name="Message"></textarea>
                               <div class="g-recaptcha" data-sitekey="6LcQdVQqAAAAAIR2X85XKD8eqk7ENwya_Dt1PZAa"></div>
+                      
                               <div class="send_bt"><button type="submit">SEND</button></div>
-                             
+                              
+         
                            </div>
                            
                         </form>
                      </div>
+                     <br>
                      <div class="col-md-6" style="width: 100%;">
                         <div class="map_main">
                            <div class="map-responsive" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-                              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.300485341369!2d78.66900577480509!3d10.788282189361151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baaf526cdd9cd23%3A0x71fa4d7ebeec09!2sSRI%20RAGAVENDRA%20TYPWRITING%20INSTITUTE!5e0!3m2!1sen!2sin!4v1727763165104!5m2!1sen!2sin"
-                              width="600" height="450" style="border:0; position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
-                              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                              <iframe title="myFrame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.300485341369!2d78.66900577480509!3d10.788282189361151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baaf526cdd9cd23%3A0x71fa4d7ebeec09!2sSRI%20RAGAVENDRA%20TYPWRITING%20INSTITUTE!5e0!3m2!1sen!2sin!4v1727763165104!5m2!1sen!2sin"
+                              width="600" height="450" style="border:0; position: absolute; top: 0; left: 0; width: 100%; height: 100%;padding-top: 28px;" 
+                              allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                            </div>
                         </div>
                      </div>
@@ -644,9 +700,17 @@
                   <div class="location_text">
                      <ul class="list-unstyled d-flex justify-content-between flex-column flex-md-row align-items-center">
                         <li>
-                           <a href="tel:9095456636">
+                           <a href="tel:6369687284">
                               <span class="padding_15"><i class="fa fa-mobile" aria-hidden="true"></i></span> 
-                              <br>Call +91 6369687284,<br>9095456636<br>9789535687
+                              <br>Call +91 6369687284
+                           </a>
+                           <a href="tel:9095456636">
+                              <span class="padding_15"><i aria-hidden="true"></i></span> 
+                              <br>9095456636
+                           </a>
+                           <a href="tel:9789535697">
+                              <span class="padding_15"><i aria-hidden="true"></i></span> 
+                              <br>9789535697
                            </a>
                         </li>
                         <li class="active">
@@ -656,9 +720,9 @@
                            </a>
                         </li>
                         <li>
-                           <a href="https://maps.app.goo.gl/47yTE8BiqxU4vzyn6">
+                           <a rel="preconnect" href="https://maps.app.goo.gl/47yTE8BiqxU4vzyn6">
                               <span class="padding_15"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-                              <br>Karumandapam, Trichy
+                              <br>Trichy
                            </a>
                         </li> 
                      </ul>
